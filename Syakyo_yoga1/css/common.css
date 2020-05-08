@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+a img {
+  border: none;
+}
+
+header.main {
+  width: 1150px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 40px;
+}
+
+header.main .logo {
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+header.main .logo a {
+  display: inline-block;
+}
+
+header.main .logo a img{
+  width: 32px;
+}
+
+#gnav {
+  width: 1110px;
+  margin: 10px auto 0;
+}
+
+#gnav ul {
+  width: 100%;
+  display: table;
+}
+
+#gnav li {
+  display: table-cell;
+  height: 50px;
+}
+
+#gnav li.home {
+  width: 77px;
+}
+
+#gnav li.beginners {
+  width: 121px;
+}
+
+#gnav li.lesson {
+  width: 106px;
+}
+
+#gnav li.fasting {
+  width: 113px;
+}
+
+#gnav li.studio {
+  width: 166px;
+}
+
+#gnav li.instructor {
+  width: 130px;
+}
+
+#gnav li.schedule {
+  width: 159px;
+}
+
+#gnav li.experience {
+  width: 148px;
+}
+
+#gnav li.voice {
+  width: 91px;
+}
+
+#gnav li.school {
+  width: 113px;
+}
+
+#gnav a {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#gnav span {
+  display: block;
+  margin: 8px auto 0;
+  font-weight: normal;
+  color: #7f7f7f;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+#gnav li.faq {
+  display: block;
+  position: absolute;
+  left: 688px;
+  top: 10px;
+  height: 23px;
+}
+
+#gnav li.faq a {
+  text-align: left;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  width: auto;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+#gnav li.faq a:before {
+  content: " ";
+  display: inline-block;
+  border-top: 1px solid #000;
+  border-right: #000;
+  transform: rotate(45deg);
+  width: 5.0px;
+  height: 5.0px;
+  margin: 5px 5px 1px 0;
+}
+
+#gnav li.facebook {
+  display: block;
+  position: absolute;
+  left: 785px;
+  top: 5px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: transparent url(../img/logo.png) 0% 50% no-repeat;
+  background-size: 23px;
+  width: 23px;
+  height: 23px;
+}
+
+#gnav li.blog {
+  display: block;
+  position: absolute;
+  left: 813px;
+  top: 5px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: transparent url(../img/logo.png) 0% 50% no-repeat;
+  background-size: 23px;
+  width: 23px;
+  height: 23px;
+}
+
+#gnav li.movie {
+  display: block;
+  position: absolute;
+  left: 841px;
+  top: 5px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: transparent url(../img/logo.png) 0% 50% no-repeat;
+  background-size: 23px;
+  width: 23px;
+  height: 23px;
+}
+
+
+.only-pc {
+  display: inherit !important;
+}
+
+.only-sp {
+  display: inherit !important;
+}
