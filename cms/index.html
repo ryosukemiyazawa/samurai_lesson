@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php $webroot = $_SERVER['DOCUMENT_ROOT']; ?>
-<?php include_once($webroot."/src/parts/temp.php"); ?>
+<?php include_once($webroot."/samurai_lesson/cms/src/parts/temp.php"); ?>
 
 <head>
   <meta charset="utf-8">
@@ -16,8 +16,9 @@
 	<!-- BootstrapのJS読み込み -->
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </head>
-
-<body>
+<!-- <?php echo $webroot."/samurai_lesson/cms/src/parts/temp.php"; ?> -->
+<?php echo getRoot().getRequestURL()."c.php"; ?>
+<!-- <body>
 	<header><a href="/">オリジナル CMS サンプル</a></header>
 	<div id="headerFiexdBlock"></div>
 	<div class="container-fluid">
@@ -73,4 +74,4 @@
 		</section>
 	</div>
 	<footer>c 2019 <a href="/">オリジナル CMS サンプル</a></footer>
-</body>
+</body> -->

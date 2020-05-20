@@ -10,7 +10,7 @@
 				?>
 				</main>
 				<?php 
-					include_once(getRoot()."/src/parts/sub.php"); 
+					include_once(getRoot()."/samurai_lesson/cms/src/parts/sub.php"); 
 				?>
 			</div>
 		</section>

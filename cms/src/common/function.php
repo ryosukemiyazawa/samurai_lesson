@@ -11,9 +11,10 @@
 
 	/* DBの接続オブジェクトを取得します。 */
 	function getDbh(){
-        $dsn='mysql:dbname=test;host=127.0.0.1';
+        $dsn='mysql:dbname=test;port=8889;host=127.0.0.1';
+        // $dsn='mysql:dbname=test;host=127.0.0.1';
         $user='root';
-        $pass='';
+        $pass='root';
     try{
         // $dbh = new PDO($dsn,$user,$pass);
         $dbh = new PDO($dsn,$user,$pass);
