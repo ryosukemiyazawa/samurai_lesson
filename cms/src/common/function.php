@@ -15,7 +15,10 @@
         $user='root';
         $pass='';
     try{
+        // $dbh = new PDO($dsn,$user,$pass);
         $dbh = new PDO($dsn,$user,$pass);
+        $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        $dbh->setAttribute( PDO::ATTR_EMULATE_PREPARES, FALSE );
         if ($dbh == null) {
             p('接続に失敗しました');
         }else{
