@@ -13,8 +13,8 @@
 		<section class="container">
 			<div class="row contents_list_wrap">
 				<?php
-				// $sql = "SELECT * FROM org_contents WHERE contents_id = 1";
-				$sql = "SELECT * FROM org_contents";
+				$sql = "SELECT * FROM org_contents WHERE contents_id = 1";
+				// $sql = "SELECT * FROM org_contents";
 				$stmt = $dbh->prepare($sql);
 				$stmt->execute();
 				$result = $stmt->fetch(PDO::FETCH_ASSOC);
