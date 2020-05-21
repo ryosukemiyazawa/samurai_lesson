@@ -7,6 +7,15 @@
 		<h3>最新記事</h3>
 		<ul class="ul_new_contents">
 		<?php
+			foreach(getDetailContentsList(NULL,true,true,NULL,5) as $contents){
+				p('<li class="new_contents">');
+				p('<a href="'.$contents["url"].'">');
+				//p('<img src="'.getEyeCatchImage($contents).'">');
+				p('<img src="/samurai_lesson/cms/assets/img/index.png">');
+				p('<span>'.$contents["contents_name"].'</span>');
+				p('</a>');
+				p('</li>');
+			}
 		?>
 		</ul>
 	</nav>

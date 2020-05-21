@@ -13,15 +13,9 @@
 		<section class="container">
 			<div class="row contents_list_wrap">
 				<?php
-				$sql = "SELECT * FROM org_contents WHERE contents_id = 1";
-				// $sql = "SELECT * FROM org_contents";
-				$stmt = $dbh->prepare($sql);
-				$stmt->execute();
-				$result = $stmt->fetch(PDO::FETCH_ASSOC);
-				p($result["name"]);
-				//	foreach(getDetailContentsList(NULL,true,true,NULL,6) as $contents){
-				//		include(getRoot()."/src/parts/contents_list.php");
-				//	}
+					foreach(getDetailContentsList(NULL,true,true,NULL,6) as $contents){
+						include(getRoot()."/samurai_lesson/cms/src/parts/contents_list.php");
+					}
 				?>
 			</div>
 		</section>
