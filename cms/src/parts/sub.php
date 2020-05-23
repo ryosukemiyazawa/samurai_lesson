@@ -1,6 +1,6 @@
 <div class="col-md-4 side">
 	<aside>
-		<h4>CMSの管理ページは<a href="/admin/">こちら→</a></h4>
+		<h4>CMSの管理ページは<a href="admin/">こちら→</a></h4>
 		<p>実際に触ってみて！</p>
 	</aside>
 	<nav>
@@ -23,6 +23,9 @@
 		<h3>カテゴリ</h3>
 		<ul>
 		<?php
+			foreach(getCategoryList(1) as $c){
+				p('<li><a href="'.$c['url'].'">'.$c['name'].'</a>');
+			}
 		?>
 		</ul>
 	</nav>
@@ -30,6 +33,9 @@
 		<h3>アーカイブ</h3>
 		<ul>
 		<?php
+			foreach(getArchiveList() as $a){
+				p('<li><a href="'.$a['url'].'">'.$a['date'].' ('.$a['count'].')</a>');
+			}
 		?>
 		</ul>
 	</nav>

@@ -149,3 +149,8 @@ section figure{
 	}
 }
 
+.side nav ul.ul_new_contents{
+	display: inline-block;
+	padding: 0px;
+}
+

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <?php $webroot = $_SERVER['DOCUMENT_ROOT']; ?>
-<?php include_once($webroot."/samurai_lesson/cms/src/parts/temp.php"); ?>
+<!-- <?php include_once($webroot."/samurai_lesson/cms/src/parts/temp.php"); ?> -->
+<?php define("APP_ROOT", __DIR__); ?>
+<?php include_once(APP_ROOT."/src/parts/temp.php"); ?>
 
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>自作CMSトップページ</title>
@@ -18,6 +20,7 @@
 </head>
 <!-- <?php echo $webroot."/samurai_lesson/cms/src/parts/temp.php"; ?> -->
 <!-- <?php echo getRoot().getRequestURL()."c.php"; ?> -->
+<!-- <?php echo $webroot; ?> -->
 <!-- <body>
 	<header><a href="/">オリジナル CMS サンプル</a></header>
 	<div id="headerFiexdBlock"></div>

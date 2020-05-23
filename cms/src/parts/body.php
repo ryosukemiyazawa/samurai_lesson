@@ -7,6 +7,8 @@
 				<main class="col-md-8">
 				<?php 
 					include_once(getRoot().getRequestURL()."c.php");
+					// include_once(getRoot()."/samurai_lesson/cms/src/parts/c.php"); 
+					// echo (getRoot().getRequestURL()."c.php");
 				?>
 				</main>
 				<?php 

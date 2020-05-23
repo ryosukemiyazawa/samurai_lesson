@@ -98,6 +98,74 @@
     contents.create_date,
     contents.update_date,
     contents.disabled_flg";
-}
-    
+    }
+
+    /* カテゴリリストを取得する */
+   function getCategoryList($exclusion_id = NULL){
+	if(isset($exclusion_id)){
+        $exclusion_query = " AND category_id <> ".$exclusion_id;
+    }else{
+        $exclusion_query = "";
+    }
+	/** 管理系は常に除外（<> 0） */
+	$sql="SELECT * FROM org_category WHERE 1 and category_id <> 0".$exclusion_query;
+	$stmt = getDbh()->prepare($sql);
+	$stmt->execute();
+	$result = $stmt->fetchAll();
+	return $result;
+   }
+
+    /* アーカイブリストを取得する */
+    function getArchiveList(){
+        $sql="
+        SELECT DATE_FORMAT(contents.create_date, '%Y/%m') AS date,
+            CONCAT('/archive',DATE_FORMAT(contents.create_date, '/%Y%m/')) AS url,
+            count(*) AS count
+        FROM org_category category,
+            org_contents contents
+        WHERE category.category_id = contents.category_id
+        AND category.category_id > 1
+        AND contents.contents_id <> 0
+        AND contents.disabled_flg is null
+        GROUP BY DATE_FORMAT(contents.create_date, '%Y/%m'), url
+        ORDER BY date DESC";
+        $stmt = getDbh()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+
+    /* テーブルを全て取得する */
+    function getTableList(){
+        $sql = "SHOW TABLE STATUS LIKE 'org%'";
+        $stmt = getDbh()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    /* ページ情報を取得する */
+    function getPageInformation(){
+        $sql="
+        SELECT ".getContentsSelectItemsQuery()."
+        FROM org_category category left outer join
+            org_contents contents on category.category_id = contents.category_id
+        WHERE CONCAT(IFNULL(category.url, \"\"), IFNULL(contents.url, \"\")) LIKE :url";
+
+        $stmt = getDbh()->prepare($sql);
+        $url = getSmartRequest();
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    /* 整形されたURLのドメイン以降を取得する */
+	function getSmartRequest(){
+		$request = $_SERVER["REQUEST_URI"];
+		$request = str_replace("index.html","",$request);
+		if(strpos($request,'?')){
+			$request = strchr($request,'?',true);
+		}
+		return $request;
+	}
 ?>
