@@ -4,8 +4,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>タイトル</title>
 	<!-- BootstrapのCSS読み込み -->
-	<link href="/samurai_lesson/cms/assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/samurai_lesson/cms/assets/css/mystyle.css" rel="stylesheet">
+	<link href="<?php echo _APP_PATH_; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- <link href="/samurai_lesson/cms/assets/css/mystyle.css" rel="stylesheet"> -->
+	<link href="<?php echo _APP_PATH_; ?>/assets/css/mystyle.css" rel="stylesheet">
 	<!-- jQuery読み込み -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- BootstrapのJS読み込み -->

@@ -1,10 +1,11 @@
 <section>
-	<h2><?php p($page["contents_name"]); ?></h2>
+	<h2><?php p(@$page["contents_name"]); ?></h2>
     <?php
         $entity_name = getEntityName($page);
         $table_name = 'org_'.$entity_name; 
         p('<a href="/admin/">管理トップへ</a>');
-        p('　　<a href="/admin/'.$entity_name.'/create/">新規登録はこちら</a>');
+        // p('　　<a href="/admin/'.$entity_name.'/create/">新規登録はこちら</a>');
+        p('　　<a href="/samurai_lesson/cms/admin/'.$entity_name.'/create/">新規登録はこちら</a>');
         
     ?>
     <table class="table table-hover" style="font-size:0.8rem">
@@ -28,8 +29,10 @@
         foreach(getEntityList($table_name) as $q){
             p('<tr>');
             $key_parameter = getKeyParameter($table_name,$q);
-            p('<td><a href="/admin/'.$entity_name.'/update/'.$key_parameter.'">更新</a></td>');
-            p('<td><a href="/admin/'.$entity_name.'/delete/'.$key_parameter.'">削除</a></td>');
+            // p('<td><a href="/admin/'.$entity_name.'/update/'.$key_parameter.'">更新</a></td>');
+            p('<td><a href="/samurai_lesson/cms/admin/'.$entity_name.'/update/'.$key_parameter.'">更新</a></td>');
+            // p('<td><a href="/admin/'.$entity_name.'/delete/'.$key_parameter.'">削除</a></td>');
+            p('<td><a href="/samurai_lesson/cms/admin/'.$entity_name.'/delete/'.$key_parameter.'">削除</a></td>');
             foreach(getColumnList($table_name) as $c){
 
                 //if(in_array($c['Field'], $head_item_array)){
@@ -65,4 +68,7 @@
         }
         return $key_parameter;
     }
+
+
+
 ?>

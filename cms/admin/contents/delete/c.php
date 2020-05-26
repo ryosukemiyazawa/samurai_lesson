@@ -1,0 +1,1 @@
+<?php include_once(getRoot()."/samurai_lesson/cms/src/parts/entity_delete.php"); ?>

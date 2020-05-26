@@ -154,3 +154,7 @@ section figure{
 	padding: 0px;
 }
 
+input[type="checkbox"]{
+	width: 10%;
+	height: 20px;
+}

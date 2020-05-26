@@ -28,7 +28,7 @@
 							$disabled="（公開済）";
 						}
 						p('<li>');
-						p($caid.'-'.$coid.':<a href="admin/edit/?category_id='.$caid.'&contents_id='.$coid.'">'.$name.'</a>');
+						p($caid.'-'.$coid.':<a href="/admin/edit/?category_id='.$caid.'&contents_id='.$coid.'">'.$name.'</a>');
 					}
 				?>
 				</ul>

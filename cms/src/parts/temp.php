@@ -1,5 +1,5 @@
 <html>
-<?php include_once($webroot."/samurai_lesson/cms/src/common/setup.php"); ?>
-<?php include_once($webroot."/samurai_lesson/cms/src/parts/head.php"); ?>
-<?php include_once($webroot."/samurai_lesson/cms/src/parts/body.php"); ?>
+<?php require_once(APP_ROOT ."/src/common/setup.php"); ?>
+<?php require_once(APP_ROOT ."/src/parts/head.php"); ?>
+<?php require_once(APP_ROOT ."/src/parts/body.php"); ?>
 </html>
